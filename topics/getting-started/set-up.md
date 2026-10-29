@@ -7,6 +7,6 @@ Get the board ready before your first turn.
 3. Give each player their markers.
 4. Choose who goes first. Traditionally, X goes first.
 
-![An empty Tic-Tac-Toe grid](../images/board.svg)
+![An empty Tic-Tac-Toe grid](/images/board.svg)
 
 The game is ready to begin.

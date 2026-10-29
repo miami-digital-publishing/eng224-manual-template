@@ -1,6 +1,6 @@
 # Take a turn {.task}
 
-Players alternate turns until someone wins or the grid is full.
+Players alternate turns until someone wins or the grid is full. To learn how a game ends, see [How to win](/topics/playing/winning.md).
 
 1. Choose any empty square on the grid.
 2. Place one of your markers in that square.

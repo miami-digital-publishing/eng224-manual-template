@@ -20,10 +20,11 @@ The editor, **github.dev**, opens in your browser. It looks like a word processo
 | File or folder | What it is |
 |---|---|
 | `manual.md` | Your website's **menu**. It lists every page, in order. |
-| `topics/` | Your **pages**. Each page is one `.md` file. |
+| `topics/` | Your **pages**. Each page is one `.md` file, sorted into folders. |
 | `images/` | Your **pictures**. |
 | `design.md` | Your website's **look**: theme, colors, and fonts. |
-| `.github/` | The website builder. **Don't change anything in here.** |
+
+The website builder lives in a hidden `.github` folder. The editor hides it so you don't change it by accident.
 
 The Tic-Tac-Toe pages are examples. Look at them to see how each kind of page works, then replace them with your own game.
 
@@ -77,7 +78,7 @@ The board is ready for play.
 
 ### Add a new page
 
-1. In the file list, right-click the **topics** folder and choose **New File**.
+1. In the file list, right-click the folder the page belongs in (inside **topics**) and choose **New File**.
 2. Name it with **lowercase letters and hyphens only**, ending in `.md`. For example, `trading-resources.md`. No spaces!
 3. Write or paste your content.
 4. Add the page to your menu (next section). **A page that isn't in the menu won't appear on your website.**
@@ -87,7 +88,7 @@ The board is ready for play.
 `manual.md` is a bulleted list of links. Each link looks like this:
 
 ```
-- [The words shown in the menu](topics/the-file-name.md)
+- [The words shown in the menu](topics/folder-name/file-name.md)
 ```
 
 To group pages under a heading, write the heading as a bullet **without** a link, then indent the pages under it by pressing **Tab**:
@@ -97,38 +98,80 @@ To group pages under a heading, write the heading as a bullet **without** a link
 
 - [About the game](topics/about.md)
 - Getting started
-    - [What's in the box](topics/components.md)
-    - [Set up the board](topics/set-up.md)
+    - [What's in the box](topics/getting-started/components.md)
+    - [Set up the board](topics/getting-started/set-up.md)
 - [Glossary](topics/glossary.md)
 ```
 
 The first line, starting with `#`, is your website's title.
 
-## 5. Add a picture
+**Tip:** `manual.md` is the best way to get around your files. Hold **Ctrl** (Windows) or **Cmd** (Mac) and click any link in it to open that page.
+
+## 5. Keep lots of pages organized
+
+A full rulebook can turn into 50 or more pages. Folders keep that manageable.
+
+**Make one folder for each section of your menu.** If your menu has a "Getting started" section, put those pages in `topics/getting-started/`. Then the file list looks like your menu, and each folder holds only a handful of files.
+
+```
+topics/
+    about.md
+    getting-started/
+        components.md
+        set-up.md
+    turns/
+        roll-dice.md
+        trade.md
+        build.md
+    glossary.md
+```
+
+- **Make a folder:** right-click **topics**, choose **New Folder**, and name it with lowercase letters and hyphens.
+- **Move a page:** drag it onto a folder. The editor offers to update the links to it; choose **Yes**. If it doesn't, the builder still finds the page by its file name.
+- **Close folders you aren't working in:** click the arrow next to a folder name. Click the **Collapse Folders** button at the top of the file list to close them all.
+
+To find things quickly:
+
+- **Open a page by name:** press **Ctrl+P** (Windows) or **Cmd+P** (Mac) and type part of the file name, like `trade`. Press Enter to open it.
+- **Search every page:** press **Ctrl+Shift+F** (Windows) or **Cmd+Shift+F** (Mac) and type a word, like `robber`.
+- **Check your list of pages:** the **Build report** on your website lists every page in your menu with its topic type. Compare it with your content inventory.
+
+Give every page its own file name, even in different folders. If two files have the same name (like `getting-started/set-up.md` and `expansion/set-up.md`), always write the full path to them.
+
+## 6. Add a picture
 
 1. Drag the picture file from your computer onto the **images** folder in the file list.
 2. Rename it with lowercase letters and hyphens, like `starting-board.png`.
 3. In your page, add this line where the picture should go:
 
 ```
-![A short description of the picture](../images/starting-board.png)
+![A short description of the picture](/images/starting-board.png)
 ```
 
-The description is read aloud to people who use screen readers, so make it meaningful. The `../` at the start means "go up one folder"; it's needed because your pages are inside the topics folder.
+Start the path with `/images/`, no matter which folder your page is in. The `/` means "start from the top folder of the repository."
 
-## 6. Change your website's look (`design.md`)
+The description is read aloud to people who use screen readers, so make it meaningful.
+
+To link from one page to another, use the same kind of path:
+
+```
+See [Trading resources](/topics/turns/trade.md) for the rules.
+```
+
+## 7. Change your website's look (`design.md`)
 
 Open `design.md` and change the words after the colons:
 
 ```
 Theme: ocean
+Style: glass
 Main color: navy
 Heading font: Merriweather
 ```
 
 The instructions in `design.md` list every theme and setting. You can't break your website from this file: if the builder doesn't understand something, it uses the theme's normal setting and tells you in the build report.
 
-## 7. Publish your changes (commit)
+## 8. Publish your changes (commit)
 
 Your website **doesn't change until you commit.**
 
@@ -139,7 +182,7 @@ Your website **doesn't change until you commit.**
 
 Check the **"Last updated"** time at the bottom of any page on your website. If it shows the time of your latest commit, you're looking at the newest version. If not, wait a minute and refresh again.
 
-## 8. If something goes wrong
+## 9. If something goes wrong
 
 The builder fixes small mistakes for you and builds your website whenever it can.
 
@@ -162,6 +205,9 @@ Format your answer as Markdown DITA (MDITA) for a DITA-OT website:
   a step. Never put a paragraph, picture, or note inside a numbered step.
 - Reference: facts to look up, in Markdown tables.
 - Write one topic per answer. Don't add YAML front matter or HTML.
+- Start picture paths with /images/ (like ![Starting board](/images/board.png)) and links
+  to other pages with /topics/ (like [Trading](/topics/turns/trade.md)).
+- Above your answer, suggest a file name in lowercase-with-hyphens.md.
 ```
 
 Remember: the AI is your assistant, not the author. Check every rule against the original rulebook.
