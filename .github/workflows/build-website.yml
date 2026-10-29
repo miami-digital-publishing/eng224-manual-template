@@ -23,7 +23,7 @@ jobs:
       cancel-in-progress: true
     steps:
       - name: Get your files
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Build the website
         id: build
@@ -31,7 +31,7 @@ jobs:
 
       - name: Package the website
         if: steps.build.outcome == 'success'
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
           path: _site
 
@@ -56,4 +56,4 @@ jobs:
     steps:
       - name: Publish the website
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
