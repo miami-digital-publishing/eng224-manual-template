@@ -170,7 +170,9 @@ Main color: navy
 Heading font: Merriweather
 ```
 
-The instructions in `design.md` list every theme and setting. You can't break your website from this file: if the builder doesn't understand something, it uses the theme's normal setting and tells you in the build report.
+The instructions in `design.md` list every theme and setting.
+
+**Choose your Start page.** Your home page has a **Start here** button for someone who has just opened the box and wants to play. In `design.md`, set `Start page:` to the menu item that player needs first, like `Start page: Set up the board`. Every page also ends with **Previous** and **Next** links that follow the order of your menu, so put your menu in the order a new player should read it. You can't break your website from this file: if the builder doesn't understand something, it uses the theme's normal setting and tells you in the build report.
 
 ## 8. Publish your changes (commit)
 
