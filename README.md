@@ -134,6 +134,7 @@ To find things quickly:
 
 - **Open a page by name:** press **Ctrl+P** (Windows) or **Cmd+P** (Mac) and type part of the file name, like `trade`. Press Enter to open it.
 - **Search every page:** press **Ctrl+Shift+F** (Windows) or **Cmd+Shift+F** (Mac) and type a word, like `robber`.
+- **Search your website:** every page of your website has a search box at the top, so your readers can find any rule. Use it to check that someone looking for a word like "robber" would find the right page.
 - **Check your list of pages:** the **Build report** on your website lists every page in your menu with its topic type. Compare it with your content inventory.
 
 Give every page its own file name, even in different folders. If two files have the same name (like `getting-started/set-up.md` and `expansion/set-up.md`), always write the full path to them.
