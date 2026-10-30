@@ -26,14 +26,14 @@ The editor, **github.dev**, opens in your browser. It looks like a word processo
 
 The website builder lives in a hidden `.github` folder. The editor hides it so you don't change it by accident.
 
-The Tic-Tac-Toe pages are examples. Look at them to see how each kind of page works, then replace them with your own game.
+The pages that come with this repository are a short sample manual for an invented game called **Skyharbor**. They show each kind of page, a menu with sections, a picture, and links between pages. Look at them to see how everything works, then replace them with your own game.
 
 ## 3. Write a page (a "topic")
 
 Every page starts with a title line: a `#`, a space, the title, and the **topic type** in curly brackets.
 
 ```
-# Setting Up the Board {.task}
+# Set Up the Sky Map {.task}
 ```
 
 There are three topic types:
@@ -41,45 +41,45 @@ There are three topic types:
 **Concept** `{.concept}` explains *what something is*. Use paragraphs. Use `##` for section headings.
 
 ```
-# How Scoring Works {.concept}
+# How to Win {.concept}
 
-Players earn points by building settlements and cities.
+At the end of the eighth round, the captain with the most renown wins.
 
-## Bonus points
+## Earning renown
 
-The longest road is worth two extra points.
+Contracts are usually the largest source of renown.
 ```
 
 **Task** `{.task}` explains *how to do something*. Use a numbered list, with **one instruction per number**. To add details to a step, use a bullet point indented under it.
 
 ```
-# Set Up the Board {.task}
+# Set Up the Sky Map {.task}
 
-Do this before your first game.
+Do this before the players choose their colors.
 
-1. Lay out the ten land tiles in a circle.
-2. Shuffle the development cards.
-    - Place them face down beside the board.
-3. Give each player a set of pieces.
+1. Unfold the sky map and place it in the middle of the table.
+2. Shuffle the contract cards.
+    - Place them face down beside the map.
+3. Place the storm marker on the region numbered 7.
 
-The board is ready for play.
+The sky map is ready.
 ```
 
 **Reference** `{.reference}` holds *facts to look up*, usually in a table.
 
 ```
-# Building Costs {.reference}
+# Scoring Table {.reference}
 
-| Item | Cost |
+| Source | Renown |
 |------|------|
-| Road | 1 brick, 1 wood |
-| City | 3 ore, 2 wheat |
+| Dock | 2 each |
+| Upgrade | 1 each |
 ```
 
 ### Add a new page
 
 1. In the file list, right-click the folder the page belongs in (inside **topics**) and choose **New File**.
-2. Name it with **lowercase letters and hyphens only**, ending in `.md`. For example, `trading-resources.md`. No spaces!
+2. Name it with **lowercase letters and hyphens only**, ending in `.md`. For example, `sell-cargo.md`. No spaces!
 3. Write or paste your content.
 4. Add the page to your menu (next section). **A page that isn't in the menu won't appear on your website.**
 
@@ -94,13 +94,13 @@ The board is ready for play.
 To group pages under a heading, write the heading as a bullet **without** a link, then indent the pages under it by pressing **Tab**:
 
 ```
-# Catan Game Manual
+# Skyharbor Game Manual
 
-- [About the game](topics/about.md)
-- Getting started
-    - [What's in the box](topics/getting-started/components.md)
-    - [Set up the board](topics/getting-started/set-up.md)
-- [Glossary](topics/glossary.md)
+- [Game overview](topics/about/game-overview.md)
+- Setting up
+    - [Set up the sky map](topics/setup/set-up-sky-map.md)
+    - [Set up your player area](topics/setup/set-up-player-area.md)
+- [Glossary](topics/help/glossary.md)
 ```
 
 The first line, starting with `#`, is your website's title.
@@ -111,19 +111,21 @@ The first line, starting with `#`, is your website's title.
 
 A full rulebook can turn into 50 or more pages. Folders keep that manageable.
 
-**Make one folder for each section of your menu.** If your menu has a "Getting started" section, put those pages in `topics/getting-started/`. Then the file list looks like your menu, and each folder holds only a handful of files.
+**Make one folder for each section of your menu.** If your menu has a "Setting up" section, put those pages in `topics/setup/`. Then the file list looks like your menu, and each folder holds only a handful of files.
 
 ```
 topics/
-    about.md
-    getting-started/
-        components.md
-        set-up.md
+    about/
+        game-overview.md
+        how-to-win.md
+    setup/
+        set-up-sky-map.md
+        set-up-player-area.md
     turns/
-        roll-dice.md
-        trade.md
-        build.md
-    glossary.md
+        round-overview.md
+        sail.md
+    help/
+        glossary.md
 ```
 
 - **Make a folder:** right-click **topics**, choose **New Folder**, and name it with lowercase letters and hyphens.
@@ -132,21 +134,21 @@ topics/
 
 To find things quickly:
 
-- **Open a page by name:** press **Ctrl+P** (Windows) or **Cmd+P** (Mac) and type part of the file name, like `trade`. Press Enter to open it.
-- **Search every page:** press **Ctrl+Shift+F** (Windows) or **Cmd+Shift+F** (Mac) and type a word, like `robber`.
-- **Search your website:** every page of your website has a search box at the top, so your readers can find any rule. Use it to check that someone looking for a word like "robber" would find the right page.
+- **Open a page by name:** press **Ctrl+P** (Windows) or **Cmd+P** (Mac) and type part of the file name, like `sail`. Press Enter to open it.
+- **Search every page:** press **Ctrl+Shift+F** (Windows) or **Cmd+Shift+F** (Mac) and type a word, like `storm`.
+- **Search your website:** every page of your website has a search box at the top, so your readers can find any rule. Use it to check that someone looking for a word like "storm" would find the right page.
 - **Check your list of pages:** the **Build report** on your website lists every page in your menu with its topic type. Compare it with your content inventory.
 
-Give every page its own file name, even in different folders. If two files have the same name (like `getting-started/set-up.md` and `expansion/set-up.md`), always write the full path to them.
+Give every page its own file name, even in different folders. If two files have the same name (like `setup/overview.md` and `turns/overview.md`), always write the full path to them.
 
 ## 6. Add a picture
 
 1. Drag the picture file from your computer onto the **images** folder in the file list.
-2. Rename it with lowercase letters and hyphens, like `starting-board.png`.
+2. Rename it with lowercase letters and hyphens, like `sky-map.png`.
 3. In your page, add this line where the picture should go:
 
 ```
-![A short description of the picture](/images/starting-board.png)
+![A short description of the picture](/images/sky-map.png)
 ```
 
 Start the path with `/images/`, no matter which folder your page is in. The `/` means "start from the top folder of the repository."
@@ -156,7 +158,7 @@ The description is read aloud to people who use screen readers, so make it meani
 To link from one page to another, use the same kind of path:
 
 ```
-See [Trading resources](/topics/turns/trade.md) for the rules.
+See [Sail](/topics/turns/sail.md) for the rules.
 ```
 
 ## 7. Change your website's look (`design.md`)
@@ -172,14 +174,14 @@ Heading font: Merriweather
 
 The instructions in `design.md` list every theme and setting.
 
-**Choose your Start page.** Your home page has a **Start here** button for someone who has just opened the box and wants to play. In `design.md`, set `Start page:` to the menu item that player needs first, like `Start page: Set up the board`. Every page also ends with **Previous** and **Next** links that follow the order of your menu, so put your menu in the order a new player should read it. You can't break your website from this file: if the builder doesn't understand something, it uses the theme's normal setting and tells you in the build report.
+**Choose your Start page.** Your home page has a **Start here** button for someone who has just opened the box and wants to play. In `design.md`, set `Start page:` to the menu item that player needs first, like `Start page: Set up the sky map`. Every page also ends with **Previous** and **Next** links that follow the order of your menu, so put your menu in the order a new player should read it. You can't break your website from this file: if the builder doesn't understand something, it uses the theme's normal setting and tells you in the build report.
 
 ## 8. Publish your changes (commit)
 
 Your website **doesn't change until you commit.**
 
 1. Click the **Source Control** icon on the far left. It looks like a branching line, and shows a number when you have changes.
-2. Type a short message describing what you changed, like `Add setup page`.
+2. Type a short message describing what you changed, like `Add the sail page`.
 3. Click **Commit & Push**.
 4. Wait about **two minutes**, then open your website and refresh the page.
 
@@ -208,8 +210,8 @@ Format your answer as Markdown DITA (MDITA) for a DITA-OT website:
   a step. Never put a paragraph, picture, or note inside a numbered step.
 - Reference: facts to look up, in Markdown tables.
 - Write one topic per answer. Don't add YAML front matter or HTML.
-- Start picture paths with /images/ (like ![Starting board](/images/board.png)) and links
-  to other pages with /topics/ (like [Trading](/topics/turns/trade.md)).
+- Start picture paths with /images/ (like ![Sky map](/images/sky-map.png)) and links
+  to other pages with /topics/ (like [Sail](/topics/turns/sail.md)).
 - Above your answer, suggest a file name in lowercase-with-hyphens.md.
 ```
 

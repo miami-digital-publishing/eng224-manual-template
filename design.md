@@ -10,8 +10,8 @@ Text size: medium
 Corners: rounded
 Topic labels: show
 Logo: none
-Tagline: Everything you need to play, one page at a time
-Start page: Set up a game
+Tagline: Trade, sail, and outrun the storms above the clouds
+Start page: Set up the sky map
 Footer text: Written for ENG 224 at Miami University
 
 
@@ -83,7 +83,7 @@ Cinzel, Bangers, Press Start 2P, Comic Neue, Nunito.
   or none
 - Start page: the page your home page's "Start here" button opens.
   Write the words of a menu item exactly as they appear in manual.md,
-  like: Set up a game. Think about your reader: someone who just
+  like: Set up the sky map. Think about your reader: someone who just
   opened the box. Which page do they need first? Write "default" to
   use the first page in your menu.
 - Footer text: any short sentence shown at the bottom of every page,

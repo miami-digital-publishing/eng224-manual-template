@@ -1,10 +1,17 @@
-# Tic-Tac-Toe Game Manual
+# Skyharbor Game Manual
 
-- [About the game](topics/about-the-game.md)
-- Getting started
-    - [What's in the box](topics/getting-started/components.md)
-    - [Set up a game](topics/getting-started/set-up.md)
-- Playing the game
-    - [Take a turn](topics/playing/take-a-turn.md)
-    - [How to win](topics/playing/winning.md)
-- [Glossary](topics/glossary.md)
+- About the game
+    - [Game overview](topics/about/game-overview.md)
+    - [How to win](topics/about/how-to-win.md)
+- Components
+    - [Component list](topics/components/component-list.md)
+- Setting up
+    - [Set up the sky map](topics/setup/set-up-sky-map.md)
+    - [Set up your player area](topics/setup/set-up-player-area.md)
+- Playing a round
+    - [Round overview](topics/turns/round-overview.md)
+    - [Sail](topics/turns/sail.md)
+- Scoring
+    - [Scoring table](topics/scoring/scoring-table.md)
+- Help
+    - [Glossary](topics/help/glossary.md)
