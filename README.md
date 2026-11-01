@@ -192,7 +192,7 @@ Check the **"Last updated"** time at the bottom of any page on your website. If 
 The builder fixes small mistakes for you and builds your website whenever it can.
 
 - **Build report:** the bottom of every page on your website has a **Build report** link. It lists anything that needs your attention, like a menu link that points to a file that doesn't exist, or a picture that's missing.
-- **"Your website didn't update" email:** if the builder can't build your website at all, it opens an **Issue** in this repository, and GitHub emails you. The issue explains the problem in plain English. It closes by itself once you fix the problem and commit again.
+- **"Your website didn't update" email:** if the builder can't build your website at all, it opens an **Issue** in this repository, and GitHub emails you. The issue explains the problem in plain English. It closes by itself once you fix the problem and commit again. If the issue has an **Ask an AI for help** section, copy the box in it into your AI chat: it has the error messages, the rules for your project, and the page involved. Check the AI's answer before you change anything, and ask your instructor if its fix doesn't work after two tries.
 - **The Actions tab:** at the top of this repository's page on github.com, **Actions** shows every build. A green check ✅ means it worked; a red ✖️ means it didn't. Click one to see its report.
 
 ---
