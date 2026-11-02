@@ -65,7 +65,7 @@ Do this before the players choose their colors.
 The sky map is ready.
 ```
 
-**Reference** `{.reference}` holds *facts to look up*, usually in a table.
+**Reference** `{.reference}` holds *facts to look up*, often in a table.
 
 ```
 # Scoring Table {.reference}
@@ -202,17 +202,16 @@ The builder fixes small mistakes for you and builds your website whenever it can
 Paste these rules into your AI chat before asking it to convert a section of your rulebook:
 
 ```
-Format your answer as Markdown DITA (MDITA) for a DITA-OT website:
+Format your output as Markdown DITA (MDITA) for a DITA-OT website:
 - Start with one title line: "# Title {.concept}", "# Title {.task}", or "# Title {.reference}".
 - Concept: explains what something is. Paragraphs, with "##" section headings if needed.
 - Task: explains how to do something. A short intro sentence, then a numbered list
   with ONE instruction per number. Put extra details as "-" bullets indented under
   a step. Never put a paragraph, picture, or note inside a numbered step.
-- Reference: facts to look up, in Markdown tables.
-- Write one topic per answer. Don't add YAML front matter or HTML.
+- Reference: facts to look up. Use Markdown tables where necessary.
+- Write one topic per file. Don't add YAML front matter or HTML.
 - Start picture paths with /images/ (like ![Sky map](/images/sky-map.png)) and links
   to other pages with /topics/ (like [Sail](/topics/turns/sail.md)).
-- Above your answer, suggest a file name in lowercase-with-hyphens.md.
 ```
 
 Remember: the AI is your assistant, not the author. Check every rule against the original rulebook.
